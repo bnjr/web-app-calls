@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web App Call Details</title>
+    <style>
+      .cycleDetails {
+        margin-bottom: 20px;
+      }
+      #buttonContainer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #buttonContainer button {
+        margin-right: 5px;
+      }
+      .textAreaContainer {
+        margin-bottom: 10px;
+      }
+      .textAreaContainer div {
+        margin-bottom: 5px;
+      }
+      .templateControls {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="templateControls">
+      <label for="templates">Select a known template:</label>
+      <select id="templates">
+        <option value="">--Select a template--</option>
+        <option value="fiori">Fiori Apps</option>
+        <!-- Add more known templates here -->
+      </select>
+    </div>
+
+    <div class="templateControls">
+      <label for="loadTemplate">Load a template from file:</label>
+      <input type="file" id="loadTemplate" accept=".json" />
+    </div>
+
+    <div class="templateControls">
+      <button id="saveTemplate">
+        Save current configuration as a template
+      </button>
+    </div>
+
+    <div class="textAreaContainer">
+      <div><label for="excludedUrls">Excluded URLs:</label></div>
+      <textarea
+        id="excludedUrls"
+        rows="4"
+        cols="50"
+        placeholder="Enter excluded URLs, one per line"
+      >
+      </textarea>
+    </div>
+
+    <div class="textAreaContainer">
+      <div><label for="includedUrls">Included URLs:</label></div>
+      <textarea
+        id="includedUrls"
+        rows="4"
+        cols="50"
+        placeholder="Enter included URLs, one per line"
+      >
+      </textarea>
+    </div>
+
+    <div id="buttonContainer">
+      <button id="toggleCapture">Start Capture</button>
+      <button id="clearCapture">Clear Capture</button>
+    </div>
+
+    <div id="urlContainer"></div>
+
+    <script src="sidepanel.ts"></script>
+  </body>
+</html>

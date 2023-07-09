@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Web App Call Details",
+  "version": "0.0.1",
+
+  "description": "Get call details of a web app, e.g. the API (OData) that is being used.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation",
+    "activeTab",
+    "sidePanel",
+    "webRequest"
+  ],
+  "action": {
+    "default_title": "Click to open sidebar"
+  },
+  "optional_permissions": ["webRequest"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "service-worker.ts",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "sidebar_action": {
+    "default_panel": "sidepanel.html"
+  }
+}

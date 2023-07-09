@@ -1,0 +1,23 @@
+{
+  "name": "web-app-call-details",
+  "version": "0.0.1",
+  "description": "## Get call details of a Web App",
+  "scripts": {
+    "start": "parcel watch src/manifest.json --host localhost --config @parcel/config-webextension",
+    "build": "parcel build src/manifest.json --config @parcel/config-webextension"
+  },
+  "keywords": [
+    "API",
+    "OData",
+    "chrome",
+    "extension"
+  ],
+  "author": "bnjr",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.9.3",
+    "@types/chrome": "^0.0.240",
+    "parcel": "^2.9.3",
+    "typescript": "^5.1.6"
+  }
+}
